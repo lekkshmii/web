@@ -42,7 +42,8 @@ const portfolioData = {
       description: "Built production ML system processing 1,000+ companies with real-time screening. Acquired by institutional client after identifying $2B+ addressable market.",
       impact: "Acquired in 3 months",
       tech: ["ML", "Product Management", "Statistical Ranking"],
-      gradient: "from-purple-600 to-blue-600"
+      gradient: "from-purple-600 to-blue-600",
+      url: "https://github.com/lekkshmii/Meridian_Demo"
     },
     {
       title: "NeMo", 
@@ -50,7 +51,8 @@ const portfolioData = {
       description: "Architected RAG system processing financial PDFs with 95% citation accuracy. Reduced processing costs by 70% with hybrid architecture.",
       impact: "95% accuracy",
       tech: ["RAG", "Multi-Modal AI", "FastAPI", "Docker"],
-      gradient: "from-cyan-600 to-teal-600"
+      gradient: "from-cyan-600 to-teal-600",
+      url: "https://github.com/lekkshmii/NeMo"
     },
     {
       title: "Astra",
@@ -58,7 +60,8 @@ const portfolioData = {
       description: "High-frequency trading system with microsecond latency. Built Monte Carlo risk engine with real-time VaR calculations.",
       impact: "Microsecond latency",
       tech: ["Rust", "WebAssembly", "Monte Carlo", "Risk Management"],
-      gradient: "from-orange-600 to-red-600"
+      gradient: "from-orange-600 to-red-600",
+      url: "https://github.com/lekkshmii/astra"
     },
     {
       title: "Skye",
@@ -66,7 +69,8 @@ const portfolioData = {
       description: "Implemented Random Matrix Theory for cleaning correlation matrices. Achieved 85% accuracy in predicting market regime changes.",
       impact: "85% accuracy",
       tech: ["Random Matrix Theory", "Network Analysis", "NumPy"],
-      gradient: "from-indigo-600 to-purple-600"
+      gradient: "from-indigo-600 to-purple-600",
+      url: "https://github.com/lekkshmii/skye"
     }
   ],
 
@@ -600,12 +604,15 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <motion.button
+                <motion.a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-purple-400 font-semibold hover:text-purple-300 transition-colors group"
                   whileHover={{ x: 5 }}
                 >
-                  Learn More <ExternalLink size={16} className="group-hover:rotate-45 transition-transform" />
-                </motion.button>
+                  View Repository <ExternalLink size={16} className="group-hover:rotate-45 transition-transform" />
+                </motion.a>
               </div>
 
               <motion.div 
@@ -719,7 +726,7 @@ const ContactSection = () => (
         }}
       >
         <motion.a
-          href="mailto:lekshmi@example.com"
+          href="mailto:lekshme2903@gmail.com"
           className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl font-semibold text-lg overflow-hidden"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -732,7 +739,9 @@ const ContactSection = () => (
         </motion.a>
 
         <motion.a
-          href="#"
+          href="https://github.com/lekkshmii"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-8 py-4 border-2 border-purple-500/50 rounded-xl font-semibold text-lg backdrop-blur-sm hover:border-purple-400 hover:bg-purple-500/10 transition-all duration-300 flex items-center gap-2"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -744,9 +753,9 @@ const ContactSection = () => (
 
       <div className="flex justify-center gap-8">
         {[
-          { icon: Mail, href: "mailto:lekshmi@example.com", label: "Email" },
-          { icon: Linkedin, href: "#", label: "LinkedIn" },
-          { icon: Github, href: "#", label: "GitHub" }
+          { icon: Mail, href: "mailto:lekshme2903@gmail.com", label: "Email" },
+          { icon: Linkedin, href: "https://www.linkedin.com/in/lekshmi-madhusudhanan-765662253/", label: "LinkedIn" },
+          { icon: Github, href: "https://github.com/lekkshmii", label: "GitHub" }
         ].map((social, index) => {
           const Icon = social.icon;
           return (
